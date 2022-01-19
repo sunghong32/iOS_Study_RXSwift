@@ -34,7 +34,7 @@ class SearchBar: UISearchBar {
     private func bind() {
         Observable
             .merge(
-                self.rx.searchButtonClicked.asObservable(),
+                self.rx.searchButtonClicked.asObservable(), //키보드의 search 버튼 (enter 버튼)
                 searchButton.rx.tap.asObservable()
             )
             .bind(to: searchButtonTapped)
@@ -45,10 +45,17 @@ class SearchBar: UISearchBar {
             .emit(to: self.rx.endEditing)
             .disposed(by: disposeBag)
 
-        self.shouldLoadResult = searchButtonTapped
-            .withLatestFrom(self.rx.text) { $1 ?? "" }
-            .filter { !$0.isEmpty }
-            .distinctUntilChanged()
+        self.shouldLoadResult = self.rx.text.asObservable().map({ element -> String in
+            return element ?? ""
+        })
+            .sample(searchButtonTapped, defaultValue: "")
+            .filter {
+                !$0.isEmpty
+            }
+//        self.shouldLoadResult = searchButtonTapped
+//            .withLatestFrom(self.rx.text) { $1 ?? "" }
+//            .filter { !$0.isEmpty }
+//            .distinctUntilChanged()
     }
 
     private func attribute() {
