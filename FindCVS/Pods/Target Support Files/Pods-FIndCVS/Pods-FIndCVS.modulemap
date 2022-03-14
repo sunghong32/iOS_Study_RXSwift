@@ -1,0 +1,6 @@
+framework module Pods_FIndCVS {
+  umbrella header "Pods-FIndCVS-umbrella.h"
+
+  export *
+  module * { export * }
+}
