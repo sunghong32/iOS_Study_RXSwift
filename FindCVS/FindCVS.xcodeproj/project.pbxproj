@@ -59,6 +59,10 @@
 		65BD831827DF65580069A831 /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BD831627DF61B50069A831 /* LocalNetworkStub.swift */; };
 		65C25A2C27DF4C8500CE3384 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C25A2B27DF4C8500CE3384 /* LocalNetwork.swift */; };
 		65C25A2E27DF4E9400CE3384 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C25A2D27DF4E9400CE3384 /* LocationInformationModel.swift */; };
+		65EB765C27E0B46400376B4D /* LocationInfomationModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB765527E0B34F00376B4D /* LocationInfomationModelTest.swift */; };
+		65EB765D27E0B46700376B4D /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB765327E0B2FB00376B4D /* Dummy.swift */; };
+		65EB765E27E0B46C00376B4D /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 65EB765A27E0B43100376B4D /* networkDummy.json */; };
+		65EB766027E0B7DF00376B4D /* LocationInfomationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB765F27E0B7DF00376B4D /* LocationInfomationViewModelTests.swift */; };
 		C666307430469D8C92D037CC /* Pods_FIndCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F55175674ED1A432A39F53 /* Pods_FIndCVS.framework */; };
 		CBCF3030A6A0DB91C2D544D9 /* Pods_FIndCVSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90324D9BDB8ED6CADD9E698 /* Pods_FIndCVSTests.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +144,10 @@
 		65BD831627DF61B50069A831 /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
 		65C25A2B27DF4C8500CE3384 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
 		65C25A2D27DF4E9400CE3384 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
+		65EB765327E0B2FB00376B4D /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		65EB765527E0B34F00376B4D /* LocationInfomationModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationModelTest.swift; sourceTree = "<group>"; };
+		65EB765A27E0B43100376B4D /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		65EB765F27E0B7DF00376B4D /* LocationInfomationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationViewModelTests.swift; sourceTree = "<group>"; };
 		79D77BFE55BA693772FBE058 /* Pods-FIndCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIndCVS.debug.xcconfig"; path = "Target Support Files/Pods-FIndCVS/Pods-FIndCVS.debug.xcconfig"; sourceTree = "<group>"; };
 		A90324D9BDB8ED6CADD9E698 /* Pods_FIndCVSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIndCVSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F55175674ED1A432A39F53 /* Pods_FIndCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIndCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +331,10 @@
 			isa = PBXGroup;
 			children = (
 				65BD831627DF61B50069A831 /* LocalNetworkStub.swift */,
+				65EB765327E0B2FB00376B4D /* Dummy.swift */,
+				65EB765527E0B34F00376B4D /* LocationInfomationModelTest.swift */,
+				65EB765A27E0B43100376B4D /* networkDummy.json */,
+				65EB765F27E0B7DF00376B4D /* LocationInfomationViewModelTests.swift */,
 			);
 			path = FIndCVSTests;
 			sourceTree = "<group>";
@@ -467,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EB765E27E0B46C00376B4D /* networkDummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65EB765C27E0B46400376B4D /* LocationInfomationModelTest.swift in Sources */,
+				65EB766027E0B7DF00376B4D /* LocationInfomationViewModelTests.swift in Sources */,
+				65EB765D27E0B46700376B4D /* Dummy.swift in Sources */,
 				65BD831827DF65580069A831 /* LocalNetworkStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +679,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = /BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = FIndCVS/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -719,7 +735,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = /BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = FIndCVS/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -754,7 +770,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = FindCVS/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = FIndCVS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -789,7 +805,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = FindCVS/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = FIndCVS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -809,6 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-.FIndCVSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIndCVS.app/FIndCVS";
@@ -829,6 +846,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.kpu.-.FIndCVSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIndCVS.app/FIndCVS";

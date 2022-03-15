@@ -70,16 +70,8 @@ struct LocationInformationViewModel {
         //MARK: 지도 중심점 설정
         let selectDetailListItem = detailListItemSelected
             .withLatestFrom(documentData) { $1[$0] }
-            .map { data -> MTMapPoint in
-                guard let longitude = Double(data.x),
-                      let latidute = Double(data.y) else {
-                          return MTMapPoint()
-                      }
-
-                let geoCoord = MTMapPointGeo(latitude: latidute, longitude: longitude)
-                return MTMapPoint(geoCoord: geoCoord)
-            }
-
+            .map(model.documentToMTMapPoint)
+        
         let moveToCurrentLocation = currentLocationButtonTapped
             .withLatestFrom(currentLocation)
 
